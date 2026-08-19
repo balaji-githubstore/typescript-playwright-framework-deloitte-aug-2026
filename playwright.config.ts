@@ -13,7 +13,7 @@ import { defineConfig, devices } from '@playwright/test';
  */
 export default defineConfig({
   /* set default timeout from 10s to 30s */
-  timeout:30*1000,
+  timeout: 30 * 1000,
 
   testDir: './tests',
   /* Run tests in files in parallel */
@@ -31,7 +31,8 @@ export default defineConfig({
     /* Base URL to use in actions like `await page.goto('')`. */
     // baseURL: 'http://localhost:3000',
     baseURL: 'https://opensource-demo.orangehrmlive.com/',
-    headless:false,
+    headless: false,
+    // viewport: { width: 500, height: 800 },
 
     /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
     trace: 'on-first-retry',
