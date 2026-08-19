@@ -1,10 +1,6 @@
-import { test, expect } from '@playwright/test';
+import { test, expect } from "../fixtures/base-fixture.js"
 
 test.describe('OrangeHRM Login UI', () => {
-
-  test.beforeEach(async ({ page }) => {
-    await page.goto('/');
-  })
 
   test('verify title', async ({ page }) => {
     await expect(page).toHaveTitle("OrangeHRM");
