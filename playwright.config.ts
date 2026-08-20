@@ -14,7 +14,7 @@ import { defineConfig, devices } from '@playwright/test';
 export default defineConfig({
   /* set default timeout from 10s to 30s */
   timeout: 30 * 1000,
-
+  expect: { timeout: 30 * 1000 },
   testDir: './tests',
   /* Run tests in files in parallel */
   fullyParallel: true,
@@ -32,13 +32,16 @@ export default defineConfig({
     // baseURL: 'http://localhost:3000',
     baseURL: 'https://opensource-demo.orangehrmlive.com/',
     headless: false,
-    // viewport: { width: 500, height: 800 },
-
+    // viewport: { width: 700, height: 800 },
+    // channel:"msedge",
+    // browserName:"chromium",
     /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
     trace: 'on-first-retry',
   },
 
   /* Configure projects for major browsers */
+  /* ***** Don't use the Chromium executable that Playwright downloaded. 
+    Find the Chrome installation on this computer and launch that */
   projects: [
     {
       name: 'chromium',

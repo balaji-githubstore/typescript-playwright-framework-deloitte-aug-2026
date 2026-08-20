@@ -8,7 +8,6 @@ test.describe('OrangeHRM Login Tests', () => {
         await page.locator("xpath=//button[normalize-space()='Login']").click()
         await expect(page.locator(
             "xpath=//p[contains(normalize-space(),'Invalid')]")).toHaveText("Invalid credentials")
-
     });
 
     test('verify valid login', async ({ page }) => {
@@ -17,6 +16,8 @@ test.describe('OrangeHRM Login Tests', () => {
         await page.locator("xpath=//button[normalize-space()='Login']").click()
 
         //assert the Quick Launch text
+        await expect(page.locator(
+            "xpath=//p[text()='Quick Launch']")).toHaveText("Quick Launch")
     });
 })
 
