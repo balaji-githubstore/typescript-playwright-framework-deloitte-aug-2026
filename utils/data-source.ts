@@ -7,3 +7,7 @@ export const invalidLoginData = [
 ]
 
 export const invalidLoginDataJson = JsonUtils.getJsonData("invalidLoginData")
+
+export const validLoginData = [
+    { username: "Admin", password: "admin123", expectedValue: "Quick Launch" }
+]
