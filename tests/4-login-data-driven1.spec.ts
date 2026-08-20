@@ -1,10 +1,10 @@
 import { test, expect } from "../fixtures/base-fixture.js"
-import { invalidLoginData } from "../utils/data-source.js"
+import { invalidLoginDataJson } from "../utils/data-source.js"
 
 test.describe('OrangeHRM Login Tests', () => {
 
 
-    for (const { username, password, expectedError } of invalidLoginData) {
+    for (const { username, password, expectedError } of invalidLoginDataJson) {
 
         test(`verify invalid login: ${username} and ${password}`, async ({ page }) => {
             await page.locator("xpath=//input[@name='username']").fill(username)

@@ -1,0 +1,1 @@
+export const JSONFILE = 'test-data/data.json'

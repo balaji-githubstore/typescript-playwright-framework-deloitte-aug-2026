@@ -1,0 +1,27 @@
+{
+    "invalidLoginData": [
+        
+        {
+            "username": "bala",
+            "password": "bala123",
+            "expectedError": "Invalid credentials"
+        },
+        {
+            "username": "john",
+            "password": "john123",
+            "expectedError": "Invalid credentials"
+        },
+        {
+            "username": "peter",
+            "password": "peter123",
+            "expectedError": "Invalid credentials"
+        }
+    ],
+    "validLoginData": [
+        {
+            "username": "Admin",
+            "password": "admin123",
+            "expectedValue": "Quick Launch"
+        }
+    ]
+}
